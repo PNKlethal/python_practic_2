@@ -38,3 +38,17 @@ elif month == 9 or month == 10 or month == 11:
     print(the_seasons_dict.get(4))
 else:
         print("Такого месяца не существует")
+
+#4 задание. Пользователь вводит строку из нескольких слов, разделённых пробелами. Вывести каждое слово с новой строки. Строки необходимо пронумеровать. Если в слово длинное, выводить только первые 10 букв в слове.
+
+my_string = input("введите несколько слов, это может быть предложение ")
+my_word = []
+number = 1
+for element in range(my_string.count(' ') + 1):
+    my_word = my_string.split()
+    if len(str(my_word)) <= 10:
+        print(f" {number} {my_word [element]}")
+        number += 1
+    else:
+        print(f" {number} {my_word [element] [0:10]}")
+        number += 1
